@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Article with Sidebar</title>
+	<style>
+		/* Styles for desktop layout (width > 1200px) */
+		@media (min-width: 1200px) {
+			.container {
+				display: flex;
+				flex-direction: row;
+			}
+			.article {
+				width: 70%;
+				padding: 20px;
+			}
+			.sidebar {
+				width: 30%;
+				padding: 20px;
+				background-color: #f0f0f0;
+				border-left: 1px solid #ddd;
+			}
+		}
+		
+		/* Styles for tablet layout (width <= 1200px and > 800px) */
+		@media (max-width: 1200px) and (min-width: 800px) {
+			.container {
+				display: flex;
+				flex-direction: column;
+			}
+			.article {
+				width: 100%;
+				padding: 20px;
+			}
+			.sidebar {
+				width: 100%;
+				padding: 20px;
+				background-color: #f0f0f0;
+				border-top: 1px solid #ddd;
+				margin-top: 20px;
+			}
+		}
+		
+		/* Styles for mobile layout (width <= 800px) */
+		@media (max-width: 800px) {
+			.container {
+				display: flex;
+				flex-direction: column;
+			}
+			.article {
+				width: 100%;
+				padding: 20px;
+			}
+			.sidebar {
+				width: 100%;
+				padding: 20px;
+				background-color: #f0f0f0;
+				border-top: 1px solid #ddd;
+				margin-top: 20px;
+			}
+		}
+		
+		h1, h2, h3 {
+			margin-bottom: 10px;
+		}
+		
+		.sidebar ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+		
+		.sidebar li {
+			margin-bottom: 10px;
+		}
+		
+		.sidebar a {
+			color: #337ab7;
+			text-decoration: none;
+		}
+		
+		.sidebar a:hover {
+			color: #23527c;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="article">
+			<h1>Lorem Ipsum Article</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+			<h2>Section 1</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+			<h3>Subsection 1.1</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+		</div>
+		<div class="sidebar">
+			<h2>Menu</h2>
+			<ul>
+				<li><a href="#">Section 1</a></li>
+				<li><a href="#">Section 2</a></li>
+				<li><a href="#">Section 3</a></li>
+			</ul>
+			<h2>Categories</h2>
+			<ul>
+				<li><a href="#">Category 1</a></li>
+				<li><a href="#">Category 2</a></li>
+				<li><a href="#">Category 3</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
